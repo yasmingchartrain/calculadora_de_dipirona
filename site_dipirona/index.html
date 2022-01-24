@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+
+<head>
+<meta charset = "UTF-8">
+
+<title>Calculadora de Dipirona</title>
+
+<link href="style.css" rel="stylesheet" type="text/css"/> 
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap" rel="stylesheet">
+
+
+<h1> Calculadora de Dipirona</h1>
+<h1> Pediátrica</h1>
+<h3>Digite a idade do paciente</h3>
+
+</head>
+<body>
+
+
+ 
+<input/>
+<button> Calcular </button>
+<div id="container-imagem"></div>
+
+<script>
+	
+var input = document.querySelector("input");
+input.focus();
+
+
+function mostra(texto){
+	alert(texto);
+}
+
+function calcula() {
+
+	var certo = false;
+
+	if(input.value < 1) {
+		mostra("Crianças com menos de 1 ano devem tomar de 2 a 5 gotas, no minímo 1 vez e no máximo 4 vezes por dia!");
+		certo = true;
+	
+	}
+	if(input.value > 1 && input.value <= 3) {
+		mostra("Crianças de 1 á 3 anos devem tomar de 3 a 10 gotas, no minímo 1 vez e no máximo 4 vezes por dia!");
+		certo = true;
+	
+	}
+	if(input.value > 4 && input.value <= 6) {
+		mostra("Crianças de 4 á 6 anos devem tomar de 5 a 15 gotas, no minímo 1 vez e no máximo 4 vezes por dia!");
+		certo = true;
+	
+	}
+	if(input.value > 7 && input.value <= 9) {
+		mostra("Crianças de 7 á 9 anos devem tomar de 8 a 20 gotas, no minímo 1 vez e no máximo 4 vezes por dia!");
+		certo = true;
+	
+	}
+	if(input.value > 10 && input.value <= 12) {
+		mostra("Crianças de 10 á 12 anos devem tomar de 10 a 30 gotas, no minímo 1 vez e no máximo 4 vezes por dia!");
+		certo = true;
+	
+	}
+	if(input.value > 13 && input.value <= 14) {
+		mostra("Crianças de 13 e 14 anos devem tomar de 15 a 35 gotas, no minímo 1 vez e no máximo 4 vezes por dia!");
+		certo = true;
+	
+	}
+	if(input.value > 15) {
+		mostra("Adolescentes e adultos maiores de 15 anos devem tomar de 20 a 40 gotas, no minímo 1 vez e no máximo 4 vezes por dia!");
+		certo = true;
+
+	}
+	if(certo == false) {
+		mostra("Erro digite um número de idade válido!");
+	}
+	
+	input.value = "";
+	input.focus();
+
+}
+
+var button = document.querySelector("button");
+button.onclick = calcula;
+
+
+</script>
+</body>
